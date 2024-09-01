@@ -1,0 +1,31 @@
+# creating files, merghing them, renaming final result and moving it in a directory
+   51  mkdir gb_cw
+   52  cd gb_cw
+   53  git init
+   54  sudo apt update
+   55  sudo apt install git
+   56  git init
+   57  cat > home_animals
+   58  cat > pack_animals
+   59  git add home_animals
+   60  git config --global user.email <there was my email>
+   61  git config --global user.name <there was my name>
+   62  git commit -m "created home animals file"
+   63  git add pack_animals
+   64  git commit -m "created pack animals file"
+   65  cat *animals > animals
+   66  cat animals
+   67  git add animals
+   68  git commit -m "merged home and pack animals"
+   69  mkdir dir
+   70  mv animals humans_friends
+   71  mv humans_friends dir
+# adding the MySQL repository, installing MySQL Server, installing Google Chrome via DPKG and removing it
+   72  sudo dpkg -i ~/Downloads/mysql-apt-config_0.8.32-1_all.deb
+   73  sudo apt update
+   74  sudo apt install mysql-server
+   75  sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb
+   76  sudo dpkg -r google-chrome-stable
+   77  git add dir/
+   78  git commit -m "added the entire dir directory"
+   79  history
