@@ -30,17 +30,11 @@ INSERT into camel (name, birth, commands) VALUES ('Sultan', '2010/06/24', 'walk'
 INSERT into donkey (name, birth, commands) VALUES ('Ia', '2012/12/10', 'walk'), ('Oslo', '2012/09/13', 'walk');
 ```
 ![cats](images/cat.png)  
-*Cats*
 ![dogs](images/dog.png)  
-*Dogs*
 ![hamsters](images/hamster.png)  
-*Hamsters*
 ![horses](images/horse.png)  
-*Horses*
 ![camels](images/camel.png)  
-*Camels*
 ![donkeys](images/donkey.png)  
-*Donkeys*  
 **10**
 ```
 drop table camel;
