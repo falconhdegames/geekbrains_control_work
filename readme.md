@@ -7,14 +7,14 @@
 create database humans_friends;
 ```
 ![databases](images/databases.png)
-###8
+**8**
 ```
 create table animal (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15));
 create table home_animal (select * from animal);
 create table pack_animal (select * from animal);
 ```
 ![tables](images/tables.png)
-#9
+**9**
 ```
 create table cat (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15), birth date, commands Varchar(50));
 create table dog (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15), birth date, commands Varchar(50));
@@ -29,25 +29,25 @@ INSERT into horse (name, birth, commands) VALUES ('Veterok', '2011/07/10', 'walk
 INSERT into camel (name, birth, commands) VALUES ('Sultan', '2010/06/24', 'walk'), ('Agata', '2012/10/06', 'walk, run');
 INSERT into donkey (name, birth, commands) VALUES ('Ia', '2012/12/10', 'walk'), ('Oslo', '2012/09/13', 'walk');
 ```
-![cats](images/cat.png)
+![cats](images/cat.png)  
 *Cats*
-![dogs](images/dog.png)
+![dogs](images/dog.png)  
 *Dogs*
-![hamsters](images/hamster.png)
+![hamsters](images/hamster.png)  
 *Hamsters*
-![horses](images/horse.png)
+![horses](images/horse.png)  
 *Horses*
-![camels](images/camel.png)
+![camels](images/camel.png)  
 *Camels*
-![donkeys](images/donkey.png)
-*Donkeys*
-#10
+![donkeys](images/donkey.png)  
+*Donkeys*  
+**10**
 ```
 drop table camel;
 create table horses_and_donkeys (select * from horse union select * from donkeys);
 ```
-![horses_and_donkeys](images/horses_and_donkeys.png)
-#11
+![horses_and_donkeys](images/horses_and_donkeys.png)  
+**11**
 ```
 create table young_animals (
 select * from cat
@@ -66,8 +66,8 @@ select * from donkey
 where TIMESTAMPDIFF(MONTH, birth, NOW()) BETWEEN 12 AND 36
 );
 ```
-![young_animals](images/young_animals.png)
-#13
+![young_animals](images/young_animals.png)  
+**13**
 ```
 create table all_animals (
 select *, 'Cat' as animal_type from cat
