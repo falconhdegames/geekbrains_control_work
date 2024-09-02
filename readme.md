@@ -2,14 +2,20 @@
 ## 1-5. Linux
 Файлы и история команд находятся в корне репозитория
 ## 7-13. MySQL
+###7
 ```
-#7
 create database humans_friends;
-#8
+```
+![databases](images/databases.png)
+###8
+```
 create table animal (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15));
 create table home_animal (select * from animal);
 create table pack_animal (select * from animal);
+```
+![tables](images/tables.png)
 #9
+```
 create table cat (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15), birth date, commands Varchar(50));
 create table dog (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15), birth date, commands Varchar(50));
 create table hamster (id Int NOT NULL primary key AUTO_INCREMENT, name Varchar(15), birth date, commands Varchar(50));
@@ -22,10 +28,27 @@ INSERT into hamster (name, birth, commands) VALUES ('Homka', '2024/01/07', 'jump
 INSERT into horse (name, birth, commands) VALUES ('Veterok', '2011/07/10', 'walk, run'), ('Groza', '2015/09/12', 'walk');
 INSERT into camel (name, birth, commands) VALUES ('Sultan', '2010/06/24', 'walk'), ('Agata', '2012/10/06', 'walk, run');
 INSERT into donkey (name, birth, commands) VALUES ('Ia', '2012/12/10', 'walk'), ('Oslo', '2012/09/13', 'walk');
+```
+![cats](images/cat.png)
+*Cats*
+![dogs](images/dog.png)
+*Dogs*
+![hamsters](images/hamster.png)
+*Hamsters*
+![horses](images/horse.png)
+*Horses*
+![camels](images/camel.png)
+*Camels*
+![donkeys](images/donkey.png)
+*Donkeys*
 #10
+```
 drop table camel;
 create table horses_and_donkeys (select * from horse union select * from donkeys);
+```
+![horses_and_donkeys](images/horses_and_donkeys.png)
 #11
+```
 create table young_animals (
 select * from cat
 where TIMESTAMPDIFF(MONTH, birth, NOW()) BETWEEN 12 AND 36
@@ -42,7 +65,10 @@ union
 select * from donkey
 where TIMESTAMPDIFF(MONTH, birth, NOW()) BETWEEN 12 AND 36
 );
+```
+![young_animals](images/young_animals.png)
 #13
+```
 create table all_animals (
 select *, 'Cat' as animal_type from cat
 union
@@ -55,7 +81,7 @@ union
 select *, 'Donkey' as animal_type from donkey
 );
 ```
-
+![all_animals](images/all_animals.png)
 ## 14-15. Программа
 Програма находится в папке *program*.  
 Программа написана на Python и имеет следующий функционал:
